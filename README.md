@@ -4,6 +4,12 @@ SpendScope is a portfolio-ready Flask app that imports bank-style transaction CS
 
 > **Privacy note:** this repository contains synthetic sample data only. Do not commit real bank statements.
 
+<p align="center">
+  <img src="screenshots/preview1.png" width="48%">
+  <img src="screenshots/preview2.png" width="48%">
+</p>
+
+
 ## Features
 
 - CSV transaction upload
