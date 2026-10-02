@@ -1,0 +1,33 @@
+body {
+  background: #f5f7fb;
+}
+
+.card {
+  border: 0;
+}
+
+.metric-card {
+  border-left: 4px solid #212529;
+}
+
+.chart {
+  min-height: 340px;
+}
+
+.empty-state {
+  background: white;
+}
+
+.table > :not(caption) > * > * {
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  .display-6 {
+    font-size: 2rem;
+  }
+
+  .chart {
+    min-height: 300px;
+  }
+}

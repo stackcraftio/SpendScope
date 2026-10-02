@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Upload CSV — SpendScope{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h1 class="h3 mb-3">Upload transactions</h1>
+        <p class="text-secondary">
+          Expected columns: <code>date</code>, <code>description</code>, and <code>amount</code>.
+          Positive amounts are income and negative amounts are spending.
+        </p>
+
+        <form method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label" for="file">Transaction CSV</label>
+            <input class="form-control" id="file" name="file" type="file" accept=".csv,text/csv" required>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary" type="submit">Import CSV</button>
+            <a class="btn btn-outline-secondary" href="{{ url_for('main.dashboard') }}">Cancel</a>
+          </div>
+        </form>
+
+        <hr>
+        <p class="mb-0 small text-secondary">
+          Try <code>sample_data/sample_transactions.csv</code> from this repository.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
